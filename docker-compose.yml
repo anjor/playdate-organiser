@@ -3,7 +3,7 @@ services:
     image: postgres:15-alpine
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
       POSTGRES_DB: playdate_db
     ports:
       - "5432:5432"
@@ -20,7 +20,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/playdate_db
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD:-postgres}@postgres:5432/playdate_db
       SECRET_KEY: your-secret-key-here-change-in-production
       BACKEND_CORS_ORIGINS: '["http://localhost:3000", "http://localhost:8000"]'
     volumes:

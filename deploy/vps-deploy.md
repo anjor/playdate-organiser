@@ -41,7 +41,7 @@ nano backend/.env
 3. **Production environment variables**
 ```bash
 # backend/.env
-DATABASE_URL=postgresql://postgres:your-secure-password@postgres:5432/playdate_db
+DATABASE_URL=postgresql://postgres:YOUR_SECURE_PASSWORD@postgres:5432/playdate_db
 SECRET_KEY=your-very-long-random-secret-key-here
 BACKEND_CORS_ORIGINS=["https://yourdomain.com", "https://api.yourdomain.com"]
 

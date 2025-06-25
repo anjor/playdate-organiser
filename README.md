@@ -36,11 +36,16 @@ cd playdate-organiser
 
 2. Create environment files:
 ```bash
+# Root directory (for Docker Compose)
+cp .env.example .env
+
 # Backend
 cp backend/.env.example backend/.env
 
 # Frontend
 cp frontend/.env.example frontend/.env
+
+# IMPORTANT: Edit the .env files and change default passwords!
 ```
 
 3. Start the application:

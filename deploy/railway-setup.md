@@ -91,7 +91,7 @@ Since Railway's free tier is limited, deploy frontend to Vercel (free):
 
 ```bash
 # Railway Environment Variables
-DATABASE_URL=postgresql://postgres:password@railway.app:5432/railway
+DATABASE_URL=postgresql://postgres:YOUR_SECURE_PASSWORD@railway.app:5432/railway
 SECRET_KEY=your-super-secret-key-generate-a-long-random-one
 BACKEND_CORS_ORIGINS=["https://your-frontend.vercel.app"]
 PORT=8000
